@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5hQ-Pz-Enp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Fa8-va-wxx">
+            <objects>
+                <viewController id="Zfa-jw-4Zu" customClass="ViewController" customModule="KHVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xRw-wh-tAE"/>
+                        <viewControllerLayoutGuide type="bottom" id="22V-uv-LRb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PkB-fB-fkH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpi-T1-3mV">
+                                <rect key="frame" x="197" y="158" width="207" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C3k-cy-nUB"/>
+                                    <constraint firstAttribute="width" constant="207" id="HG7-rI-285"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Add Overlay to Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="197" y="93" width="207" height="41"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BHc-XF-u2U" kind="show" id="7gg-Ac-PzR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogQ-d1-w9R">
+                                <rect key="frame" x="240" y="120" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DDc-q7-8nl"/>
+                                    <constraint firstAttribute="width" constant="120" id="Uac-8H-WDa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Video Player">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="P2X-pc-8XT" kind="show" id="Vuh-lJ-scC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fy2-SV-ErO">
+                                <rect key="frame" x="184" y="196" width="232" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Kir-A6-gqj"/>
+                                    <constraint firstAttribute="height" constant="30" id="d8h-MU-PWY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Add Animation to video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ohn-Z7-Jg0" kind="show" id="hwX-zZ-pTv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvG-T7-qot">
+                                <rect key="frame" x="194" y="234" width="212" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="6d6-m9-XfF"/>
+                                    <constraint firstAttribute="height" constant="30" id="K8v-Ye-RuB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Add Subtitle to video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Vao-q2-nR2" kind="show" id="vGz-Ns-bVj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nvG-T7-qot" secondAttribute="centerX" id="1lH-Cb-YeI"/>
+                            <constraint firstItem="nvG-T7-qot" firstAttribute="top" secondItem="Fy2-SV-ErO" secondAttribute="bottom" constant="8" id="AD9-ei-roW"/>
+                            <constraint firstAttribute="centerX" secondItem="Kpi-T1-3mV" secondAttribute="centerX" constant="-0.5" id="EbB-VX-ePa"/>
+                            <constraint firstItem="Fy2-SV-ErO" firstAttribute="top" secondItem="Kpi-T1-3mV" secondAttribute="bottom" constant="8" id="Tdu-VJ-0yr"/>
+                            <constraint firstItem="Kpi-T1-3mV" firstAttribute="top" secondItem="ogQ-d1-w9R" secondAttribute="bottom" constant="8" id="aeJ-fP-ero"/>
+                            <constraint firstItem="ogQ-d1-w9R" firstAttribute="top" secondItem="xRw-wh-tAE" secondAttribute="bottom" constant="56" id="avg-zh-Ged"/>
+                            <constraint firstAttribute="centerX" secondItem="ogQ-d1-w9R" secondAttribute="centerX" id="gYS-Wt-HSN"/>
+                            <constraint firstAttribute="centerX" secondItem="Fy2-SV-ErO" secondAttribute="centerX" id="yuJ-Np-yUP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="R3V-rP-NlN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLZ-ve-khV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="403"/>
+        </scene>
+        <!--Add Overlay to Video-->
+        <scene sceneID="VSZ-za-BpZ">
+            <objects>
+                <viewController id="BHc-XF-u2U" customClass="AddOverlayViewController" customModule="KHVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WQd-QL-esc"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Af-x0-EyT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v7j-XZ-LSk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Lm-c4-zmz">
+                                <rect key="frame" x="438" y="542" width="146" height="38"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Generate Output">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateOutputDidPress:" destination="BHc-XF-u2U" eventType="touchUpInside" id="79R-2z-T4Q"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XBo-7L-CJ0">
+                                <rect key="frame" x="160" y="182" width="280" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="PZq-6m-uAD"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gr-TL-tpL">
+                                <rect key="frame" x="256" y="218" width="88" height="88"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Frame-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="VV6-9j-xHL">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="X9q-FR-bJJ"/>
+                                    <constraint firstAttribute="height" constant="88" id="ftt-Jp-lo1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uU-M8-1Cv">
+                                <rect key="frame" x="160" y="218" width="88" height="88"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Frame-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-ul-9RG">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="P7E-jE-Pb7"/>
+                                    <constraint firstAttribute="height" constant="88" id="tJO-tR-gY7"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5K-xl-j32">
+                                <rect key="frame" x="352" y="218" width="88" height="88"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Frame-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="rdK-9Q-kh9">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="80q-I1-gRn"/>
+                                    <constraint firstAttribute="height" constant="88" id="EfY-iZ-7vc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Frame" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ved-C8-loN">
+                                <rect key="frame" x="249" y="153" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HKT-OC-1ks"/>
+                                    <constraint firstAttribute="width" constant="102" id="pcS-qv-gIS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Af-x0-EyT" firstAttribute="top" secondItem="2Lm-c4-zmz" secondAttribute="bottom" constant="20" id="34h-0I-P9h"/>
+                            <constraint firstItem="4gr-TL-tpL" firstAttribute="leading" secondItem="5uU-M8-1Cv" secondAttribute="trailing" constant="8" id="BOr-Hb-OIR"/>
+                            <constraint firstItem="n5K-xl-j32" firstAttribute="top" secondItem="XBo-7L-CJ0" secondAttribute="bottom" constant="8" id="HJp-lH-w8g"/>
+                            <constraint firstItem="XBo-7L-CJ0" firstAttribute="top" secondItem="WQd-QL-esc" secondAttribute="bottom" constant="118" id="Jy4-9J-DpN"/>
+                            <constraint firstItem="4gr-TL-tpL" firstAttribute="top" secondItem="XBo-7L-CJ0" secondAttribute="bottom" constant="8" id="NB8-q5-4Ap"/>
+                            <constraint firstItem="4gr-TL-tpL" firstAttribute="top" secondItem="5uU-M8-1Cv" secondAttribute="top" id="ObT-8Z-IRX"/>
+                            <constraint firstItem="n5K-xl-j32" firstAttribute="leading" secondItem="4gr-TL-tpL" secondAttribute="trailing" constant="8" id="OgL-7N-Lsd"/>
+                            <constraint firstAttribute="centerX" secondItem="Ved-C8-loN" secondAttribute="centerX" id="heW-GQ-wPR"/>
+                            <constraint firstItem="2Lm-c4-zmz" firstAttribute="trailing" secondItem="v7j-XZ-LSk" secondAttribute="trailingMargin" id="lgJ-6k-8N0"/>
+                            <constraint firstAttribute="centerX" secondItem="XBo-7L-CJ0" secondAttribute="centerX" id="pmM-My-7Y9"/>
+                            <constraint firstItem="5uU-M8-1Cv" firstAttribute="top" secondItem="XBo-7L-CJ0" secondAttribute="bottom" constant="8" id="qjl-st-GwF"/>
+                            <constraint firstItem="XBo-7L-CJ0" firstAttribute="top" secondItem="Ved-C8-loN" secondAttribute="bottom" constant="8" id="tDA-ae-vKw"/>
+                            <constraint firstItem="4gr-TL-tpL" firstAttribute="top" secondItem="n5K-xl-j32" secondAttribute="top" id="tsE-jf-08G"/>
+                            <constraint firstAttribute="centerX" secondItem="4gr-TL-tpL" secondAttribute="centerX" id="uDf-ga-vm2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Overlay to Video" id="ySN-6z-wnt">
+                        <barButtonItem key="rightBarButtonItem" title="Load Asset" id="HNc-Wn-zEJ">
+                            <connections>
+                                <action selector="loadAssetDidPress:" destination="BHc-XF-u2U" id="P41-Lc-J5U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="frameSelectSegment" destination="XBo-7L-CJ0" id="nar-V6-lW7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uvy-H1-hLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332" y="403"/>
+        </scene>
+        <!--Video Player-->
+        <scene sceneID="pSa-Ff-eCE">
+            <objects>
+                <viewController id="P2X-pc-8XT" customClass="VideoPlayerViewController" customModule="KHVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zqJ-F2-ekl"/>
+                        <viewControllerLayoutGuide type="bottom" id="4gG-td-gmI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vgq-BA-Mfo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video Player" id="B8K-cS-EiM">
+                        <barButtonItem key="rightBarButtonItem" title="Load Asset" id="vbw-0J-d3Z">
+                            <connections>
+                                <action selector="didPressLoadAsset:" destination="P2X-pc-8XT" id="QpE-Xi-1Cc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wz-e7-3fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332" y="1150"/>
+        </scene>
+        <!--Add Subtitle to video-->
+        <scene sceneID="5hd-hb-AC9">
+            <objects>
+                <viewController id="Vao-q2-nR2" customClass="AddSubtitleViewController" customModule="KHVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5xb-dE-row"/>
+                        <viewControllerLayoutGuide type="bottom" id="iR0-Lk-CZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0lr-pZ-05F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJ4-zo-GDN">
+                                <rect key="frame" x="438" y="542" width="146" height="38"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Generate Output">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressGenerateOutput:" destination="Vao-q2-nR2" eventType="touchUpInside" id="AWu-C9-gNU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9I-ne-DU9">
+                                <rect key="frame" x="249" y="162" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8B0-tP-BGj"/>
+                                    <constraint firstAttribute="width" constant="102" id="Jrk-bM-28c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="of0-gq-0lb">
+                                <rect key="frame" x="160" y="191" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="gRY-Na-HiW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rJ4-zo-GDN" firstAttribute="trailing" secondItem="0lr-pZ-05F" secondAttribute="trailingMargin" id="QFY-1N-esd"/>
+                            <constraint firstItem="iR0-Lk-CZm" firstAttribute="top" secondItem="rJ4-zo-GDN" secondAttribute="bottom" constant="20" id="ScL-j0-8xc"/>
+                            <constraint firstAttribute="centerX" secondItem="of0-gq-0lb" secondAttribute="centerX" constant="-0.5" id="clj-h0-z4a"/>
+                            <constraint firstAttribute="centerX" secondItem="v9I-ne-DU9" secondAttribute="centerX" id="ofB-TF-aPK"/>
+                            <constraint firstItem="v9I-ne-DU9" firstAttribute="top" secondItem="5xb-dE-row" secondAttribute="bottom" constant="98" id="vXS-Uh-v0v"/>
+                            <constraint firstItem="of0-gq-0lb" firstAttribute="top" secondItem="v9I-ne-DU9" secondAttribute="bottom" constant="8" id="xQI-ZS-KQp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Subtitle to video" id="nfX-y1-w20">
+                        <barButtonItem key="rightBarButtonItem" title="Load Asset" id="or1-do-ypN">
+                            <connections>
+                                <action selector="didPressLoadAsset:" destination="Vao-q2-nR2" id="HA0-KU-vaj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="subTitle1" destination="of0-gq-0lb" id="fJy-7u-AF4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAX-Ub-7PV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332" y="-980"/>
+        </scene>
+        <!--Add Amination to video-->
+        <scene sceneID="6D0-sO-enU">
+            <objects>
+                <viewController id="Ohn-Z7-Jg0" customClass="AddAnimationViewController" customModule="KHVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EtD-Pm-UHL"/>
+                        <viewControllerLayoutGuide type="bottom" id="xep-jS-NbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lyq-6y-MkL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-fg-QzT">
+                                <rect key="frame" x="438" y="542" width="146" height="38"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Generate Output">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressGenerateOutput:" destination="Ohn-Z7-Jg0" eventType="touchUpInside" id="3Wa-Gl-NN0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CbG-fg-QzT" firstAttribute="trailing" secondItem="Lyq-6y-MkL" secondAttribute="trailingMargin" id="9NJ-4S-nHJ"/>
+                            <constraint firstItem="xep-jS-NbY" firstAttribute="top" secondItem="CbG-fg-QzT" secondAttribute="bottom" constant="20" id="xE2-m1-Jll"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Amination to video" id="HRF-cH-YgQ">
+                        <barButtonItem key="rightBarButtonItem" title="Load Asset" id="sGt-Bp-zmy">
+                            <connections>
+                                <action selector="didPressLoadAsset:" destination="Ohn-Z7-Jg0" id="qh9-ie-yCA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uzz-5k-Lq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332" y="-288"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P5a-Vx-y4m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5hQ-Pz-Enp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RnU-96-Ipy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zfa-jw-4Zu" kind="relationship" relationship="rootViewController" id="nlv-81-S7i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6g-ik-zWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="403"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Frame-1.png" width="1280" height="1280"/>
+        <image name="Frame-2.png" width="1280" height="1280"/>
+        <image name="Frame-3.png" width="1280" height="1280"/>
+    </resources>
+</document>
