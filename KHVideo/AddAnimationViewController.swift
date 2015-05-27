@@ -12,6 +12,8 @@ import AVFoundation
 class AddAnimationViewController: CommonVideoViewController {
     
     
+    @IBOutlet weak var animationSelectSegment: UISegmentedControl!
+    
     @IBAction func didPressLoadAsset(sender: AnyObject) {
         self.startMediaBrowserFromViewController(self, usingDelegate: self)
     }
@@ -22,10 +24,10 @@ class AddAnimationViewController: CommonVideoViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,6 +36,101 @@ class AddAnimationViewController: CommonVideoViewController {
     
     override func applyVideoEffectsToComposition(composition: AVMutableVideoComposition!, size: CGSize) {
         
+        // 1
+        let animationImage = UIImage(named: "star.png")
+        
+        var overlayLayer1 = CALayer()
+        overlayLayer1.contents = animationImage?.CGImage
+        overlayLayer1.frame = CGRectMake(size.width/2-64, size.height/2 + 200, 128, 128)
+        overlayLayer1.masksToBounds = true
+        
+        var overlayLayer2 = CALayer()
+        overlayLayer2.contents = animationImage?.CGImage
+        overlayLayer2.frame = CGRectMake(size.width/2-64, size.height/2 - 200, 128, 128)
+        overlayLayer2.masksToBounds = true
+        
+        // 2 - Rotate
+        if animationSelectSegment.selectedSegmentIndex == 0 {
+            
+            var animation = CABasicAnimation(keyPath: "transform.rotation")
+            animation.duration = 2.0
+            animation.repeatCount = 5
+            animation.autoreverses = true
+            // rotate from 0 to 360
+            animation.fromValue = 0.0
+            animation.toValue = 2.0 * M_PI
+            animation.beginTime = AVCoreAnimationBeginTimeAtZero
+            overlayLayer1.addAnimation(animation, forKey: "rotation")
+            
+            animation = CABasicAnimation(keyPath: "transform.rotation")
+            animation.duration = 2.0
+            animation.repeatCount = 5
+            animation.autoreverses = true
+            // rotate from 0 to 360
+            animation.fromValue = 0.0
+            animation.toValue = 2.0 * M_PI
+            animation.beginTime = AVCoreAnimationBeginTimeAtZero
+            overlayLayer2.addAnimation(animation, forKey: "rotation")
+            
+            // 3 - Fade
+        } else if animationSelectSegment.selectedSegmentIndex == 1 {
+            
+            var animation = CABasicAnimation(keyPath: "opacity")
+            animation.duration = 3.0
+            animation.repeatCount = 5
+            animation.autoreverses = true
+            // animate from fully visible to invisible
+            animation.fromValue = 1.0
+            animation.toValue = 0.0
+            animation.beginTime = AVCoreAnimationBeginTimeAtZero
+            overlayLayer1.addAnimation(animation, forKey: "animatedOpacity")
+            
+            animation = CABasicAnimation(keyPath: "opacity")
+            animation.duration = 3.0
+            animation.repeatCount = 5
+            animation.autoreverses = true
+            // animate from fully visible to invisible
+            animation.fromValue = 1.0
+            animation.toValue = 0.0
+            animation.beginTime = AVCoreAnimationBeginTimeAtZero
+            overlayLayer2.addAnimation(animation, forKey: "animatedOpacity")
+            
+            // 4 - Twinkle
+        } else if animationSelectSegment.selectedSegmentIndex == 2 {
+            
+            var animation = CABasicAnimation(keyPath: "transform.scale")
+            animation.duration = 0.5
+            animation.repeatCount = 10
+            animation.autoreverses = true
+            // animate from half size to full size
+            animation.fromValue = 0.5
+            animation.toValue = 1.0
+            animation.beginTime = AVCoreAnimationBeginTimeAtZero
+            overlayLayer1.addAnimation(animation, forKey: "scale")
+            
+            animation = CABasicAnimation(keyPath: "transform.scale")
+            animation.duration = 0.5
+            animation.repeatCount = 10
+            animation.autoreverses = true
+            // animate from half size to full size
+            animation.fromValue = 0.5
+            animation.toValue = 1.0
+            animation.beginTime = AVCoreAnimationBeginTimeAtZero
+            overlayLayer2.addAnimation(animation, forKey: "scale")
+        }
+        
+        //5
+        var parentLayer = CALayer()
+        var videoLayer = CALayer()
+        
+        parentLayer.frame = CGRectMake(0, 0, size.width, size.height)
+        videoLayer.frame = CGRectMake(0, 0, size.width, size.height)
+        
+        parentLayer.addSublayer(videoLayer)
+        parentLayer.addSublayer(overlayLayer1)
+        parentLayer.addSublayer(overlayLayer2)
+        
+        composition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, inLayer: parentLayer)
         
     }
     

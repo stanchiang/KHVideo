@@ -324,10 +324,35 @@
                                     <action selector="didPressGenerateOutput:" destination="Ohn-Z7-Jg0" eventType="touchUpInside" id="3Wa-Gl-NN0"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sPY-el-C9o">
+                                <rect key="frame" x="160" y="183" width="280" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="dSm-ej-W55"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Rotate"/>
+                                    <segment title="Fade"/>
+                                    <segment title="Twinkle"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Animation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1P-Fa-8ZC">
+                                <rect key="frame" x="234" y="150" width="132" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="Say-vg-zTC"/>
+                                    <constraint firstAttribute="height" constant="24" id="gXv-LQ-Kli"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CbG-fg-QzT" firstAttribute="trailing" secondItem="Lyq-6y-MkL" secondAttribute="trailingMargin" id="9NJ-4S-nHJ"/>
+                            <constraint firstItem="sPY-el-C9o" firstAttribute="top" secondItem="EtD-Pm-UHL" secondAttribute="bottom" constant="119" id="MwX-XV-57S"/>
+                            <constraint firstAttribute="centerX" secondItem="z1P-Fa-8ZC" secondAttribute="centerX" id="TeF-gl-led"/>
+                            <constraint firstItem="z1P-Fa-8ZC" firstAttribute="top" secondItem="EtD-Pm-UHL" secondAttribute="bottom" constant="86" id="fGD-8p-DUR"/>
+                            <constraint firstAttribute="centerX" secondItem="sPY-el-C9o" secondAttribute="centerX" id="lrB-Cn-3i3"/>
                             <constraint firstItem="xep-jS-NbY" firstAttribute="top" secondItem="CbG-fg-QzT" secondAttribute="bottom" constant="20" id="xE2-m1-Jll"/>
                         </constraints>
                     </view>
@@ -338,6 +363,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animationSelectSegment" destination="sPY-el-C9o" id="JLI-2F-3Ar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzz-5k-Lq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
