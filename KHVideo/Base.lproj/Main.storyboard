@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpi-T1-3mV">
-                                <rect key="frame" x="197" y="158" width="207" height="30"/>
+                                <rect key="frame" x="197" y="141" width="207" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="C3k-cy-nUB"/>
                                     <constraint firstAttribute="width" constant="207" id="HG7-rI-285"/>
@@ -34,25 +34,11 @@
                                     <segue destination="BHc-XF-u2U" kind="show" id="7gg-Ac-PzR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogQ-d1-w9R">
-                                <rect key="frame" x="240" y="120" width="120" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DDc-q7-8nl"/>
-                                    <constraint firstAttribute="width" constant="120" id="Uac-8H-WDa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
-                                <state key="normal" title="Video Player">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="P2X-pc-8XT" kind="show" id="Vuh-lJ-scC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fy2-SV-ErO">
-                                <rect key="frame" x="184" y="196" width="232" height="30"/>
+                                <rect key="frame" x="184" y="255" width="232" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="232" id="Kir-A6-gqj"/>
-                                    <constraint firstAttribute="height" constant="30" id="d8h-MU-PWY"/>
+                                    <constraint firstAttribute="height" constant="30" id="Wt2-Cl-RWB"/>
+                                    <constraint firstAttribute="width" constant="232" id="aOd-5D-W7G"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
                                 <state key="normal" title="Add Animation to video">
@@ -63,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvG-T7-qot">
-                                <rect key="frame" x="194" y="234" width="212" height="30"/>
+                                <rect key="frame" x="194" y="179" width="212" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="212" id="6d6-m9-XfF"/>
                                     <constraint firstAttribute="height" constant="30" id="K8v-Ye-RuB"/>
@@ -76,17 +62,63 @@
                                     <segue destination="Vao-q2-nR2" kind="show" id="vGz-Ns-bVj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxf-pJ-g0P">
+                                <rect key="frame" x="198" y="103" width="205" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="6Jz-al-naE"/>
+                                    <constraint firstAttribute="height" constant="30" id="pzZ-N3-rsX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Add Border to video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tkd-jT-xcT" kind="show" id="Nbi-WL-T2M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcw-oo-rT9">
+                                <rect key="frame" x="208" y="217" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="D3Z-vT-5NG"/>
+                                    <constraint firstAttribute="height" constant="30" id="rZ7-M2-oUu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Add Tilt to video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tfM-zv-LBA" kind="show" id="qWq-0t-Aem"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogQ-d1-w9R">
+                                <rect key="frame" x="240" y="293" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DDc-q7-8nl"/>
+                                    <constraint firstAttribute="width" constant="120" id="Uac-8H-WDa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Video Player">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="P2X-pc-8XT" kind="show" id="Vuh-lJ-scC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="nvG-T7-qot" secondAttribute="centerX" id="1lH-Cb-YeI"/>
-                            <constraint firstItem="nvG-T7-qot" firstAttribute="top" secondItem="Fy2-SV-ErO" secondAttribute="bottom" constant="8" id="AD9-ei-roW"/>
-                            <constraint firstAttribute="centerX" secondItem="Kpi-T1-3mV" secondAttribute="centerX" constant="-0.5" id="EbB-VX-ePa"/>
-                            <constraint firstItem="Fy2-SV-ErO" firstAttribute="top" secondItem="Kpi-T1-3mV" secondAttribute="bottom" constant="8" id="Tdu-VJ-0yr"/>
-                            <constraint firstItem="Kpi-T1-3mV" firstAttribute="top" secondItem="ogQ-d1-w9R" secondAttribute="bottom" constant="8" id="aeJ-fP-ero"/>
-                            <constraint firstItem="ogQ-d1-w9R" firstAttribute="top" secondItem="xRw-wh-tAE" secondAttribute="bottom" constant="56" id="avg-zh-Ged"/>
-                            <constraint firstAttribute="centerX" secondItem="ogQ-d1-w9R" secondAttribute="centerX" id="gYS-Wt-HSN"/>
-                            <constraint firstAttribute="centerX" secondItem="Fy2-SV-ErO" secondAttribute="centerX" id="yuJ-Np-yUP"/>
+                            <constraint firstAttribute="centerX" secondItem="cxf-pJ-g0P" secondAttribute="centerX" constant="-0.5" id="4pB-4j-ykt"/>
+                            <constraint firstItem="cxf-pJ-g0P" firstAttribute="top" secondItem="xRw-wh-tAE" secondAttribute="bottom" constant="39" id="6C5-Sw-oMp"/>
+                            <constraint firstAttribute="centerX" secondItem="Kpi-T1-3mV" secondAttribute="centerX" constant="-0.5" id="Brg-Cv-rj4"/>
+                            <constraint firstAttribute="centerX" secondItem="Fy2-SV-ErO" secondAttribute="centerX" id="GpH-pG-a59"/>
+                            <constraint firstItem="Pcw-oo-rT9" firstAttribute="top" secondItem="nvG-T7-qot" secondAttribute="bottom" constant="8" id="HWd-Hv-88d"/>
+                            <constraint firstAttribute="centerX" secondItem="ogQ-d1-w9R" secondAttribute="centerX" id="Lor-ci-mgN"/>
+                            <constraint firstAttribute="centerX" secondItem="nvG-T7-qot" secondAttribute="centerX" id="al9-TA-74K"/>
+                            <constraint firstItem="Kpi-T1-3mV" firstAttribute="top" secondItem="cxf-pJ-g0P" secondAttribute="bottom" constant="8" id="awH-3x-acK"/>
+                            <constraint firstItem="Fy2-SV-ErO" firstAttribute="top" secondItem="Pcw-oo-rT9" secondAttribute="bottom" constant="8" id="crv-Cs-1hA"/>
+                            <constraint firstAttribute="centerX" secondItem="Pcw-oo-rT9" secondAttribute="centerX" constant="-0.5" id="svp-Ur-tqC"/>
+                            <constraint firstItem="ogQ-d1-w9R" firstAttribute="top" secondItem="Fy2-SV-ErO" secondAttribute="bottom" constant="8" id="sxF-bu-eqk"/>
+                            <constraint firstItem="nvG-T7-qot" firstAttribute="top" secondItem="Kpi-T1-3mV" secondAttribute="bottom" constant="8" id="zfc-Ft-fYP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R3V-rP-NlN"/>
@@ -211,6 +243,168 @@
             </objects>
             <point key="canvasLocation" x="2332" y="403"/>
         </scene>
+        <!--Add Border to video-->
+        <scene sceneID="jjb-c8-kRy">
+            <objects>
+                <viewController id="tkd-jT-xcT" customClass="AddBorderViewController" customModule="KHVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tE6-6H-Aqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="gmW-tg-rRY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O0u-6u-N6P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiE-VN-ygK">
+                                <rect key="frame" x="438" y="542" width="146" height="38"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Generate Output">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressGenerateOutput:" destination="tkd-jT-xcT" eventType="touchUpInside" id="IpC-7H-W7i"/>
+                                    <action selector="generateOutputDidPress:" destination="BHc-XF-u2U" eventType="touchUpInside" id="RFU-LJ-rRV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Border Width" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrI-cj-RbE">
+                                <rect key="frame" x="238" y="153" width="124" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JiQ-f7-Wsi"/>
+                                    <constraint firstAttribute="width" constant="124" id="Wax-l7-dw4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hr1-VR-pjT">
+                                <rect key="frame" x="160" y="261" width="280" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="C1U-gl-fuv"/>
+                                    <constraint firstAttribute="width" constant="280" id="Py5-wM-8Zm"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Blue"/>
+                                    <segment title="Red"/>
+                                    <segment title="Green"/>
+                                    <segment title="White"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yro-0Q-reS">
+                                <rect key="frame" x="158" y="182" width="284" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Ffk-Ze-BdE"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Border Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vT-10-0IF">
+                                <rect key="frame" x="243" y="232" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="C3X-5e-0qH"/>
+                                    <constraint firstAttribute="width" constant="115" id="b8y-LH-uiL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yro-0Q-reS" firstAttribute="top" secondItem="jrI-cj-RbE" secondAttribute="bottom" constant="8" id="3B9-9f-JLI"/>
+                            <constraint firstAttribute="centerX" secondItem="jrI-cj-RbE" secondAttribute="centerX" id="Kh6-kj-ra9"/>
+                            <constraint firstItem="hr1-VR-pjT" firstAttribute="top" secondItem="3vT-10-0IF" secondAttribute="bottom" constant="8" id="QSg-Q6-aid"/>
+                            <constraint firstItem="yro-0Q-reS" firstAttribute="top" secondItem="tE6-6H-Aqy" secondAttribute="bottom" constant="118" id="Win-TX-XIB"/>
+                            <constraint firstItem="3vT-10-0IF" firstAttribute="top" secondItem="tE6-6H-Aqy" secondAttribute="bottom" constant="168" id="WsW-rU-QbM"/>
+                            <constraint firstItem="FiE-VN-ygK" firstAttribute="trailing" secondItem="O0u-6u-N6P" secondAttribute="trailingMargin" id="aPK-ZH-Ph0"/>
+                            <constraint firstAttribute="centerX" secondItem="yro-0Q-reS" secondAttribute="centerX" id="e43-XJ-nnt"/>
+                            <constraint firstAttribute="centerX" secondItem="3vT-10-0IF" secondAttribute="centerX" constant="-0.5" id="k1Y-Qb-rkq"/>
+                            <constraint firstItem="gmW-tg-rRY" firstAttribute="top" secondItem="FiE-VN-ygK" secondAttribute="bottom" constant="20" id="lV2-xa-YI3"/>
+                            <constraint firstAttribute="centerX" secondItem="hr1-VR-pjT" secondAttribute="centerX" id="sWd-H8-O3l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Border to video" id="mFC-CK-PS7">
+                        <barButtonItem key="rightBarButtonItem" title="Load Asset" id="Moc-wx-yvV">
+                            <connections>
+                                <action selector="didPressLoadAsset:" destination="tkd-jT-xcT" id="uVd-JL-3MI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorSegment" destination="hr1-VR-pjT" id="Lo5-zN-DfG"/>
+                        <outlet property="widthBar" destination="yro-0Q-reS" id="aZ0-0U-7SV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H61-uS-UcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332" y="1154"/>
+        </scene>
+        <!--Add Tilt to video-->
+        <scene sceneID="nwa-rS-rbw">
+            <objects>
+                <viewController id="tfM-zv-LBA" customClass="AddTiltViewController" customModule="KHVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A4G-gq-WHu"/>
+                        <viewControllerLayoutGuide type="bottom" id="AoT-c5-9G9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tyW-e2-Z7O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-ij-cOS">
+                                <rect key="frame" x="438" y="542" width="146" height="38"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Generate Output">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressGenerateOutput:" destination="tfM-zv-LBA" eventType="touchUpInside" id="tDO-tb-9ao"/>
+                                    <action selector="generateOutputDidPress:" destination="BHc-XF-u2U" eventType="touchUpInside" id="84X-3B-81g"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U2P-ZD-XUp">
+                                <rect key="frame" x="160" y="182" width="280" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="8tg-8g-9eB"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Tilt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfO-bb-dsV">
+                                <rect key="frame" x="261" y="153" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="Hy6-rp-xIa"/>
+                                    <constraint firstAttribute="height" constant="21" id="mFr-Wz-FFn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GfO-bb-dsV" secondAttribute="centerX" id="32i-Q2-xdJ"/>
+                            <constraint firstItem="AoT-c5-9G9" firstAttribute="top" secondItem="vdw-ij-cOS" secondAttribute="bottom" constant="20" id="B3g-ed-gcP"/>
+                            <constraint firstAttribute="centerX" secondItem="U2P-ZD-XUp" secondAttribute="centerX" id="HqZ-Ig-x5Z"/>
+                            <constraint firstItem="vdw-ij-cOS" firstAttribute="trailing" secondItem="tyW-e2-Z7O" secondAttribute="trailingMargin" id="eQA-uH-pau"/>
+                            <constraint firstItem="U2P-ZD-XUp" firstAttribute="top" secondItem="GfO-bb-dsV" secondAttribute="bottom" constant="8" id="i0H-Gy-4Au"/>
+                            <constraint firstItem="U2P-ZD-XUp" firstAttribute="top" secondItem="A4G-gq-WHu" secondAttribute="bottom" constant="118" id="uDX-qZ-eR6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Tilt to video" id="N2M-su-xQl">
+                        <barButtonItem key="rightBarButtonItem" title="Load Asset" id="IiY-n2-brz">
+                            <connections>
+                                <action selector="didPressLoadAsset:" destination="tfM-zv-LBA" id="k0s-OB-eYN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tiltSegment" destination="U2P-ZD-XUp" id="3FS-SF-vfL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oET-73-2pD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="1154"/>
+        </scene>
         <!--Video Player-->
         <scene sceneID="pSa-Ff-eCE">
             <objects>
@@ -250,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wz-e7-3fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2332" y="1150"/>
+            <point key="canvasLocation" x="953" y="1154"/>
         </scene>
         <!--Add Subtitle to video-->
         <scene sceneID="5hd-hb-AC9">
@@ -316,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAX-Ub-7PV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2332" y="-980"/>
+            <point key="canvasLocation" x="1613" y="-288"/>
         </scene>
         <!--Add Amination to video-->
         <scene sceneID="6D0-sO-enU">
