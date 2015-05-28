@@ -12,7 +12,6 @@ import AVFoundation
 class AddBorderViewController: CommonVideoViewController {
     
     
-    @IBOutlet weak var myview: UIView!
     @IBOutlet weak var widthBar: UISlider!
     @IBOutlet weak var colorSegment: UISegmentedControl!
     
@@ -39,8 +38,6 @@ class AddBorderViewController: CommonVideoViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        widthBar.minimumValue = 1.0
-        widthBar.maximumValue = 20.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,17 +58,15 @@ class AddBorderViewController: CommonVideoViewController {
             borderImage = self.imageWithColor(UIColor.whiteColor(), imageSize: CGRectMake(0, 0, size.width, size.height))
         }
         
-        
         var backgroundLayer = CALayer()
         backgroundLayer.contents = borderImage.CGImage
         backgroundLayer.frame = CGRectMake(0, 0, size.width, size.height)
         backgroundLayer.masksToBounds = true
         
         var videoLayer = CALayer()
-        let wval: Float = floor(widthBar.value)
+        let wval: Float = floor(widthBar.value * 20)
         
         videoLayer.frame = CGRectMake(CGFloat(wval), CGFloat(wval), CGFloat(size.width) - CGFloat(wval * 2), CGFloat(size.height) - CGFloat( wval * 2))
-        myview.layer.contents = borderImage.CGImage
         
         var parentLayer = CALayer()
         parentLayer.addSublayer(backgroundLayer)
