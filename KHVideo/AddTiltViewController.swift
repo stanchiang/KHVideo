@@ -15,11 +15,11 @@ class AddTiltViewController: CommonVideoViewController {
     
     @IBOutlet weak var tiltSegment: UISegmentedControl!
     
-    @IBAction func didPressLoadAsset(sender: AnyObject) {
+    @IBAction func didPressLoadAsset(_ sender: AnyObject) {
         self.startMediaBrowserFromViewController(self, usingDelegate: self)
     }
     
-    @IBAction func didPressGenerateOutput(sender: AnyObject) {
+    @IBAction func didPressGenerateOutput(_ sender: AnyObject) {
         self.videoOutput()
     }
 
@@ -34,13 +34,13 @@ class AddTiltViewController: CommonVideoViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func applyVideoEffectsToComposition(composition: AVMutableVideoComposition!, size: CGSize) {
+    override func applyVideoEffectsToComposition(_ composition: AVMutableVideoComposition!, size: CGSize) {
         // 1 - Layer setup
-        var videoLayer = CALayer()
-        var parentLayer = CALayer()
+        let videoLayer = CALayer()
+        let parentLayer = CALayer()
         
-        parentLayer.frame = CGRectMake(0, 0, size.width, size.height);
-        videoLayer.frame = CGRectMake(0, 0, size.width, size.height);
+        parentLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height);
+        videoLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height);
         parentLayer.addSublayer(videoLayer)
         
         // 2 - Set up the transform
@@ -53,10 +53,10 @@ class AddTiltViewController: CommonVideoViewController {
             identityTransform.m34 = 1.0 / -1000 // lesser the denominator lesser will be the transformation
         }
         // 4 - Rotate
-        videoLayer.transform = CATransform3DRotate(identityTransform, CGFloat(M_PI)/6.0, 1, 0, 0)
+        videoLayer.transform = CATransform3DRotate(identityTransform, CGFloat(Double.pi)/6.0, 1, 0, 0)
         
         // 5 - Composition
-        composition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, inLayer: parentLayer)
+        composition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, in: parentLayer)
         
     }
     

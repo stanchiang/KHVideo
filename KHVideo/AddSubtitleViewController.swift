@@ -12,56 +12,41 @@ import AVFoundation
 class AddSubtitleViewController: CommonVideoViewController {
     
     @IBOutlet weak var subTitle1: UITextField!
-    
-    
-    @IBAction func didPressLoadAsset(sender: AnyObject) {
+
+    @IBAction func didPressLoadAsset(_ sender: AnyObject) {
         self.startMediaBrowserFromViewController(self, usingDelegate: self)
     }
     
-    @IBAction func didPressGenerateOutput(sender: AnyObject) {
+    @IBAction func didPressGenerateOutput(_ sender: AnyObject) {
         self.videoOutput()
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        //Starting timer right now
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    override func applyVideoEffectsToComposition(composition: AVMutableVideoComposition!, size: CGSize) {
+    override func applyVideoEffectsToComposition(_ composition: AVMutableVideoComposition!, size: CGSize) {
         
         // 1 - Set up the text layer
-        var subTitle1Text = CATextLayer()
-        subTitle1Text.font = "Helvetica-Bold"
-        subTitle1Text.frame = CGRectMake(0, 0, size.width, 100)
+        let subTitle1Text = CATextLayer()
+        subTitle1Text.font = "Helvetica-Bold" as CFTypeRef
+        subTitle1Text.frame = CGRect(x: 0, y: 0, width: size.width, height: 100)
         subTitle1Text.string = self.subTitle1.text
         subTitle1Text.alignmentMode = kCAAlignmentCenter
-        subTitle1Text.foregroundColor = UIColor.whiteColor().CGColor
+        subTitle1Text.foregroundColor = UIColor.white.cgColor
         
         // 2 - The usual overlay
-        var overlayLayer = CALayer()
+        let overlayLayer = CALayer()
         overlayLayer.addSublayer(subTitle1Text)
-        overlayLayer.frame = CGRectMake(0, 0, size.width, size.height)
+        overlayLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         overlayLayer.masksToBounds = true
         
         
         // 3 - set up the parent layer
-        var parentLayer = CALayer()
-        var videoLayer = CALayer()
-        parentLayer.frame = CGRectMake(0, 0, size.width, size.height)
-        videoLayer.frame = CGRectMake(0, 0, size.width, size.height)
+        let parentLayer = CALayer()
+        let videoLayer = CALayer()
+        parentLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        videoLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
         parentLayer.addSublayer(videoLayer)
         parentLayer.addSublayer(overlayLayer)
-        composition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, inLayer: parentLayer)
+        composition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, in: parentLayer)
     }
     
 

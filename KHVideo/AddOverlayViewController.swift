@@ -15,11 +15,11 @@ class AddOverlayViewController: CommonVideoViewController {
     
     @IBOutlet weak var frameSelectSegment: UISegmentedControl!
     
-    @IBAction func loadAssetDidPress(sender: AnyObject) {
+    @IBAction func loadAssetDidPress(_ sender: AnyObject) {
         self.startMediaBrowserFromViewController(self, usingDelegate: self)
     }
     
-    @IBAction func generateOutputDidPress(sender: AnyObject) {
+    @IBAction func generateOutputDidPress(_ sender: AnyObject) {
         self.videoOutput()
     }
     
@@ -34,9 +34,9 @@ class AddOverlayViewController: CommonVideoViewController {
     }
     
     
-    override func applyVideoEffectsToComposition(composition: AVMutableVideoComposition!, size: CGSize) {
+    override func applyVideoEffectsToComposition(_ composition: AVMutableVideoComposition!, size: CGSize) {
         // 1 - set up the overlay
-        var overlayLayer = CALayer()
+        let overlayLayer = CALayer()
         var overlayImage: UIImage!
         
         switch frameSelectSegment.selectedSegmentIndex
@@ -52,24 +52,24 @@ class AddOverlayViewController: CommonVideoViewController {
         }
         
 
-        overlayLayer.contents = overlayImage?.CGImage
-        overlayLayer.frame = CGRectMake(0, 0, size.width, size.height)
+        overlayLayer.contents = overlayImage?.cgImage
+        overlayLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
         overlayLayer.masksToBounds = true
         
         
         // 2 - set up the parent layer
-        var parentLayer = CALayer()
-        var videoLayer = CALayer()
+        let parentLayer = CALayer()
+        let videoLayer = CALayer()
         
-        parentLayer.frame = CGRectMake(0, 0, size.width, size.height)
-        videoLayer.frame = CGRectMake(0, 0, size.width, size.height)
+        parentLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        videoLayer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
         parentLayer.addSublayer(videoLayer)
         parentLayer.addSublayer(overlayLayer)
         
         // 3 - apply magic
-        composition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, inLayer: parentLayer)
+        composition.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, in: parentLayer)
         
 
         
